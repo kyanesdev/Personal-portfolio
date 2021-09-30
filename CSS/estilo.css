@@ -1,0 +1,384 @@
+/*Todo esto son los selectores */
+
+.titulo {
+  color: #0800aa;
+}
+
+/* Clases */
+.Subtitulo {
+  color: #00b8cb;
+}
+
+/* ID */
+#cotitulo {
+  color: #3d02ab;
+}
+
+/* Atributos */
+[parrafo="primer-parrafo"] {
+  color: #d1029c;
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  margin: auto;
+  margin: top;
+  border: 4px solid blue;
+  background: yellow;
+  overflow: auto;
+}
+
+.negrita {
+  color: #faff01;
+  display:block;
+}
+
+
+/* pseudoclase */
+.we:hover {
+  color: #e64161;
+}
+
+
+.cajaPlace{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  padding: 50px;
+  background: #5500bf;
+  text-emphasis-color: black;
+
+  display: inline-block;
+}
+
+.cajaPlace,textarea{
+  color: black;
+}
+
+.cajaPlace::placeholder{
+  color: red;
+}
+
+.cajaPlace::selection,textarea{
+  background-color: yellow;
+  color: blue;
+}
+
+.sobreMi{
+  display: block;
+}
+
+.primerHover,textarea{
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  padding: 5%;
+  background: #3d02ab;
+  color: white;
+}
+
+.primerHover:hover{
+  background: #d400df;
+  transition: 3s;
+}
+
+.nav__responsive-ul{
+  display: none;
+}
+
+.nav{
+  background-color: #174bbe;
+}
+
+.nav__li{
+  display: inline-block;
+  padding: 10px;
+  color: white;
+}
+
+.nav__li a{
+  color: white;
+  font-family: 'Mukta', sans-serif;
+  text-decoration: none;
+}
+
+.nav__li:hover > a{
+  color: #bbb;
+}
+
+.nav__li:hover{
+  color: #bbb;
+}
+
+.nav__li i{
+
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 500px){
+
+  .nav__ul{
+    display: none;
+  }
+
+  .nav{
+    height: 37px;
+    width: 100%;
+  }
+
+  .nav__responsive-ul{
+    display: block;
+    position: absolute;
+    width: 100%;
+    color: #016;
+    margin-top: 55px;
+    padding-top: 0px;
+    height: 0px;
+  }
+
+  .nav__responsive-ul:hover > .nav__li-conteiner{
+    top: -0px;
+  }
+
+  .nav__li-conteiner{
+    position: relative;
+    top: -1000px;
+    height: calc(100vh - 55px);
+    background-color: #9bf;
+    transition: all 1s;
+    z-index: 1;
+    width: 45%;
+    padding-top: 10px;
+
+  }
+
+
+.nav__responsive-li{
+  width: 100%;
+  padding: 9px 20px;
+}
+
+.nav__responsive-li i{
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 5px;
+  width: 30px;
+}
+
+  .nav__responsive-li > a{
+    color: #016;
+    font-family: 'Mukta', sans-serif;
+    text-decoration: none;
+  }
+
+
+
+  .nav__responsive-button-conteiner{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    background-color: #69c;
+    margin-top: -55px;
+    z-index: 100;
+    height: 55px;
+  }
+
+  .nav__responsive-button{
+    padding: 15px 150px 2px;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+
+
+
+                                            /*TEORIA*/
+/*Especificidad*/
+/*!important */
+/* estilos de linea */
+/* identificadores */
+/* clases */
+/* pseudoclases */
+/* atributos*/
+/* elementos */
+/* pseudoelementos */
+/* -------------------------------------------------------------------*/
+
+/* Metodologia BEM */
+/* Pones el nombre del conteiner seguido de 2 "__" y luego la clase */
+/* Ej: contact-form__input */
+/* Lo que haces con esto basicamente es que eliminas el tema de Especificidad
+entonces te ahorras te semejante chirimbolo en la cabeza. Pero para ser especifico
+en alguna clase usas esto: */
+/* Ej: contact-form__input--active */
+
+/* -------------------------------------------------------------------*/
+
+/*Positions: relative (Aca un objeto se pone encima del otro)
+             absolute (Aca el espacio almacenado se borra y se suplanta)
+             fixed (Aca es lo mismo que absolute nada mas que el objeto queda fijo)
+             sticky (Aca es como un relative)
+*/
+
+/*
+Z-Index:
+La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes.
+Cuando varios elementos se superponen,
+los elementos con mayor valor z-index cubren aquellos con menor valor.
+Normalmente en el Z-Index lo definis 1 para darle mayor prioridad, pero esto
+es relativo ya que le podes meter 50 como para que tenga mas prioridad frente
+a otros elementos*/
+
+
+/* Display:  block: No importa el contenido, ocupa todo el bloque
+             inline: Solo ocupa lo que tenga el contenido
+
+             inline-block: Se comporta como bloque que se adapta a lo que ocupa el contenido
+
+             ELEMENTOS PARA MAQUETAR
+             flex:
+             grid:
+
+             inline-flex:
+             inline-grid:
+
+*/
+
+
+/*  Overflow: Es el desbordamiento que ocurre con una caja.
+
+    auto: overflow auto , hace que podes scrollear dentro de la caja con el
+    texto que se desbordó.
+
+    scroll: overflow scroll , hace que le pongas obligatoriamente
+    la barra de scroll.
+
+    hidden: oculta la barra de scroll.
+
+*/
+
+/*  Float:
+La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor,
+permitiendo a los elementos de texto y en línea aparecer a su costado.
+El elemento es removido del normal flujo de la página, aunque aún sigue siendo
+parte del flujo (a diferencia del posicionamiento absoluto).
+*/
+
+
+/* Pseudoelementos
+
+  .clase::first-line : Modificas toda la primera linea del texto (Se ajusta en responisve) | Block
+  .clase::first-letter : Modificas la primera letra del texto | Block
+
+  .clase::placeholder : Le pones un texto a un input como "Inserte su texto aqui"
+  .clase::selection: Cuando marcas texto le modificas el color del texto y background
+
+  .clase::after : insertas texto despues pero no forma parte del texto en general| Hijos-Content(NECESARIO)-inline
+  .clase::before : insertas texto adelante pero no forma parte del texto en general | Hijos-Content(NECESARIO)-inline
+
+*/
+
+/* Pseudoclases (Escucha al elemento cuando...)
+
+  :hover -> Tenes el mouse por encima
+
+  :link -> Cambia el link(trabajas con la etiqueta <a>Link</a>) dependiendo
+  si visitaste o no la pagina con anterioridad.
+
+  :visited -> Cambia una vez que ya fue visitado el link,
+  va de la mano con el anterior.
+
+  :active -> Cambia mientras tengas presionado
+
+  :focus -> Cambia cuando el elemento esta en foco
+  (Normalmente se trabaja en inputs).
+
+  :lang -> Lo usas pasandole idiomas por parametros (Casi ni se usa)
+
+*/
+
+/* Object-fit (Se aplican a las imagenes)
+
+    Contain: Las resoluciones de las imagenes se ajusten al contenido
+
+    Cover: Se ajusta el tamaño (de la resolucion) rellenando todo el contenido
+    con la particularidad que hace una especie de zoom.
+
+    None: Usa las propiedades por defecto.
+
+    Scale-Down: Se queda con la mejor propiedades.
+
+
+  Object-position
+
+   left-right-top-bottom: La imagen se muestra mas del lado del que yo ponga
+   la posicion.
+
+   PX-EM-%-ETC
+
+/*  Cursor
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor
+
+  caja:active{
+  cursor: *propiedad segun la pagina*;
+}
+*/
+
+
+/*  Colores
+
+    Hexadecimal
+
+    RGB
+
+    RGBA
+
+    HSL
+
+    HSLA
+
+*/
+
+/*  Responsive Design - Mobile first
+
+    Responsive Design: El Responsive Design básicamente trata de redimensionar
+    los elementos de la web y colocarlos de manera que se adapten al
+    tamaño de cada dispositivo, permitiendo así una visualización adecuada
+    proporcionando al usuario una mejor experiencia.
+
+    Mobile first: Mobile First es una estrategia de diseño de interfaces de uso (UI)
+    donde se inicia el proceso pensando primero en cómo va a aplicar a pantallas pequeñas
+    (smartPhones o Mobile) y desde ahí hacer crecer el diseño para adaptarse a pantallas de mayor
+    tamaño como tablets y ordenadores.
+
+    ejemplo de como solucionarlo:
+
+    Con esta funcion hacemos que cuando se achique la pantalla (cambiemos la resolucion)
+    a menos de 800px, se rescale de nuevo y acomode las cajas una abajo de la otra
+    de manera que quede bien para mobile.
+
+
+    @media only screen and (max-width: 800px){
+
+    div{
+      display: block;
+      width: 100%;
+    }
+
+    }
+
+    IMPORTANTE: Tenes que tener la etiqueta "meta name="viewport" para poder
+    trabajar con responsive design.
+*/
+
+/*  Iconos: Font awesome
+
+  Link: <script src="https://kit.fontawesome.com/e4dc525427.js" crossorigin="anonymous"></script>
+
+
+
+
+*/

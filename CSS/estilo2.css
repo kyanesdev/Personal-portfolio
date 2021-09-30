@@ -1,0 +1,47 @@
+
+/*Todo esto seria para los textos*/
+/*Si queres otra tipografia, podes ir al Google Fonts*/
+
+*{
+  background: grey;
+}
+.h1--primera {
+  background: #2dd109;
+  width: 50vw;
+  font-size: 5em;
+  font-family: monospace;
+  font-weight: 700;
+  line-height: 2;
+  display: inline;
+  /*height: 1vh;*/
+}
+
+
+
+.parrafo--primera {
+  color:#000;
+  font-family: 'Patrick Hand' , monospace;
+  font-size: 2em;
+  width: 50vw;
+  background: #bb0988;
+  line-height: 2;
+  font-weight: 200;
+
+}
+
+
+.imagen--ryzen {
+  padding: 0px;
+  margin: 0px;
+  width: 50vw;
+  height: 50vh;
+}
+
+@media only screen and (max-width: 800px){
+
+div{
+  display: block;
+  width: 100%;
+}
+
+}
