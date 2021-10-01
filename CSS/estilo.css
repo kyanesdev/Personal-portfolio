@@ -382,3 +382,41 @@ https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor
 
 
 */
+
+/*  Flex-box (trabaja como bloque, se llama bloque flex)
+
+  Sirve para cambiar las direcciones y no funciona con herencia de herencia (
+  los nietos por asi decirlo), solo con herencia directa.
+
+  ejemplo: si un div tiene display:flex, los elementos que contiene ese div,
+  son elementos flex. Pero si dentro del div hay otro div, los elementos del 2do
+  div, no son flex (a menos que yo defina display:flex de nuevo en ese div).
+
+
+  Se encuentran 2 conceptos: el cross axis (eje "x") y main axis (eje "y")
+
+  Main axis: En el comienzo tiene el "main-start" y al final se encuentra el
+  "main-end".
+
+  cross axis: En el comienzo tiene el "cross-start" y al final se encuentra el
+  "cross-end".
+
+
+
+                        PROPIEDADES QUE SE LE APLICAN AL CONTENEDOR:
+
+Flex-Direction: es lo que cambia el main axis con el cross.
+-row: valor por defecto, los elementos se comportan en forma de filas
+-column: se comportan en forma de columna.
+-row-reverse: se comporta como fila pero al revez (el orden cambió esta vez )
+-column-reverse: el orden va de abajo para arriba.
+
+Flex-Wrap: No-Wrap - Wrap -Wrap-reverse.
+
+Flex-Flow: flex-direction flex-wrap.
+
+Justify-Content: center, space-around, space-between, space-evenly (main axis)
+
+Align-items: flext-start, center, flex-end, stretch, baseline (cross axis)
+
+*/
