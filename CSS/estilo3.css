@@ -91,12 +91,6 @@ position: fixed;
 }
 
 
-/*Positions: relative (Aca un objeto se pone encima del otro)
-             absolute (Aca el espacio almacenado se borra y se suplanta)
-             fixed (Aca es lo mismo que absolute nada mas que el objeto queda fijo)
-             sticky (Aca es como un relative)
-*/
-
 .caja2{
 
   width: 200px;
